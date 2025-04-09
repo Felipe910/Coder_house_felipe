@@ -235,22 +235,49 @@ footer {
     font-size: 0.9rem;
 }
 
- /* Estilos Pagina 2 (equipo profesional) */
+/* Estilos Pagina 2 (equipo profesional) */
 
- .equipo-profesional {
+.equipo-profesional {
     padding: 30px 5%;
 }
+
 .equipo-profesional h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 40px;
     color: #000000;
- }
+}
 
- .equipo-profesional h3 {
-        font-size: 1.8rem;
-        margin-top: 0;
-        color: #222;}
+.equipo-profesional h3 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    color: #222;
+}
+
+.plantilla .delanteros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.plantilla .defensores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.plantilla .centrocampistas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.plantilla .delanteros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
 
 .plantilla ul {
     background: white;
@@ -265,9 +292,9 @@ footer {
 }
 
 .plantilla img {
-    width: 30%;
-    height: 300px;
-    object-fit: cover;
+    width: 40%;
+    height: 400px;
+    object-fit:cover;
 }
 
 /* Responsive */
@@ -275,12 +302,12 @@ footer {
     .noticia {
         grid-template-columns: 1fr;
     }
-    
+
     .nav_bar ul {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .lista-eventos {
         grid-template-columns: 1fr;
     }
