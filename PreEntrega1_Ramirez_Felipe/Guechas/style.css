@@ -66,7 +66,7 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #333;
+    color: #000000;
 }
 
 .noticia {
@@ -233,6 +233,41 @@ footer {
     margin-top: 20px;
     color: #aaa;
     font-size: 0.9rem;
+}
+
+ /* Estilos Pagina 2 (equipo profesional) */
+
+ .equipo-profesional {
+    padding: 30px 5%;
+}
+.equipo-profesional h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #000000;
+ }
+
+ .equipo-profesional h3 {
+        font-size: 1.8rem;
+        margin-top: 0;
+        color: #222;}
+
+.plantilla ul {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.plantilla ul:hover {
+    transform: translateY(-5px);
+}
+
+.plantilla img {
+    width: 30%;
+    height: 300px;
+    object-fit: cover;
 }
 
 /* Responsive */
