@@ -238,7 +238,7 @@ footer {
 /* Estilos Pagina 2 (equipo profesional) */
 
 .equipo-profesional {
-    padding: 30px 5%;
+    padding: 40px 5%;
 }
 
 .equipo-profesional h2 {
@@ -252,9 +252,10 @@ footer {
     font-size: 1.8rem;
     margin-top: 0;
     color: #222;
+    text-align: center;
 }
 
-.plantilla .delanteros {
+.plantilla .porteros {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
@@ -264,6 +265,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    
 }
 
 .plantilla .centrocampistas {
@@ -285,6 +287,26 @@ footer {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    list-style: none;
+}
+.plantilla .porteros img {
+    width: 15%;
+    height: 300px;
+    object-fit:cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plantilla .delanteros img {
+    width: 20%;
+    height: 400px;
+    object-fit:cover;
+    border-radius: 15px;
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.1);
+}
+
+.plantilla .defensores{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .plantilla ul:hover {
@@ -295,6 +317,8 @@ footer {
     width: 40%;
     height: 400px;
     object-fit:cover;
+    border-radius: 15px;
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive */
@@ -311,4 +335,7 @@ footer {
     .lista-eventos {
         grid-template-columns: 1fr;
     }
+}
+.plantilla {
+    grid-template-columns: 1fr;
 }
