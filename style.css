@@ -11,8 +11,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
-    background-color:
-    
 }
 
 .escudo {
@@ -28,7 +26,7 @@ body {
     z-index: 2;
 }
 .escudo .fondo{
-    position: absolute;
+    position:absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -315,40 +313,100 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     list-style: none;
+    text-align: center;
 }
 .plantilla .porteros img {
     width: 15%;
     height: 300px;
     object-fit:cover;
-    border-radius: 15px;
+    border-radius: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 50px;
+}
+.portero-1{
+    align-items: center;
+    text-align: center;
 }
 
 .plantilla .delanteros img {
     width: 20%;
     height: 400px;
     object-fit:cover;
-    border-radius: 15px;
+    border-radius: 40px;
     box-shadow: 0 20px 15px rgba(0, 0, 0, 0.1);
+    padding-top: 15px;
 }
-
+.delantero-1{
+    align-items: center;
+    text-align: center;
+}
+.delantero-2{
+    align-items: center;
+    text-align: center;
+}
 .plantilla .defensores{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .plantilla ul:hover {
     transform: translateY(-5px);
+    background: rgb(252, 230, 106);
+    transform: scale(1.05);
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
 .plantilla img {
     width: 40%;
     height: 400px;
     object-fit:cover;
-    border-radius: 15px;
+    border-radius: 40px;
     box-shadow: 0 20px 15px rgba(0, 0, 0, 0.1);
+    padding-top: 15px;
 }
 
+.bastion_güecha h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+}
 
+.bastion_güecha {
+    padding: 30px 5%;
+    background: linear-gradient(to right, #ffffff, rgb(252, 230, 106));    
+}
+.estadio {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 20px;
+}
+    .estadio .terreno{
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .estadio .terreno:hover {
+        transform: translateY(-5px);
+    }
+    
+    .estadio .terreno img {
+        width: 100%;
+        height: 200px;
+        object-fit:cover
+    }
+    
+    .estadio p {
+        padding: 20px;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: #444;
+        margin: 0;
+        text-align: center;
+    }
 
 
 
