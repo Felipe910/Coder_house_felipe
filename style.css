@@ -279,6 +279,11 @@ footer {
     color: #222;
     text-align: center;
 }
+.equipo-profesional p{
+    font-size: smaller;
+    padding: 0;
+    margin: 0;
+}
 
 .plantilla .porteros {
     display: grid;
@@ -321,7 +326,6 @@ footer {
     object-fit:cover;
     border-radius: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding-top: 50px;
 }
 .portero-1{
     align-items: center;
@@ -408,7 +412,52 @@ footer {
         text-align: center;
     }
 
+/*palmares*/
 
+
+.palmares h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-align: center;
+}
+
+.copas ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.copas p{
+    text-align: center;
+}
+
+.copas li {
+    background: #f0f0f0;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.copas li:hover {
+    background: rgb(252, 230, 106);
+    transform: scale(1.05);
+}
+
+.copas a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+.copas img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
