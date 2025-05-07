@@ -9,16 +9,17 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
-    background-color: #f8f9fa;
-
-    h1 a {
-        color: black;
-        text-decoration: none;
-        font-family: "Kumar One", serif;
-        font-size: 2.5rem;
-        margin: 10px 0;
-    }
 }
+
+
+h1 a {
+    color: black;
+    text-decoration: none;
+    font-family: "Kumar One", serif;
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
 
 .escudo {
     display: flex;
@@ -59,8 +60,9 @@ body {
         display: flex;
         list-style: none;
         padding: 0;
-        margin: 20px 0;
+        margin: 40px 0;
         gap: 20px;
+        z-index: 2;
     }
 
     a {
@@ -88,7 +90,8 @@ body {
         color: #000000;
     }
 }
-.eventos_escuela{
+
+.eventos_escuela {
     ul {
         display: flex;
         justify-content: center;
@@ -106,15 +109,88 @@ body {
         border-radius: 10px;
     }
 
- li {
-    background: #f0f0f0;
-    padding: 15px 20px;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
+    li {
+        background: #f0f0f0;
+        padding: 15px 20px;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    li:hover {
+        background: rgb(252, 230, 106);
+        transform: scale(1.05);
+    }
 }
-li:hover {
-    background: rgb(252, 230, 106);
-    transform: scale(1.05);
+
+.vision {
+    padding: 30px 5%;
+    background: linear-gradient(to right, #ffffff, rgb(252, 230, 106));
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: #000000;
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        color: #444;
+        text-align: justify;
+    }
 }
-}
+    .mision {
+        padding: 30px 5%;
+        background: linear-gradient(to right, #ffffff, rgb(252, 230, 106));
+        
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #000000;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            color: #444;
+            text-align: justify;
+        }
+    }
+    .inscripciones{
+        h2{
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #000000;  
+        }
+    }
+    .footer{
+        background-color: #333;
+        color: white;
+        padding: 40px 5%;
+        text-align: center;
+
+        ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: rgb(252, 230, 106);
+        }
+        
+    }
