@@ -8,7 +8,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
+  padding: 30px 5%;
+}
+
+.escudo {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+.escudo img {
+  width: 200px;
+  height: 250px;
+  object-fit: contain;
+  z-index: 2;
 }
 
 h1 a {
@@ -35,7 +48,7 @@ h1 a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 32%;
+  height: 35%;
   object-fit: cover;
   opacity: 0.7;
   z-index: 1;
@@ -48,6 +61,9 @@ h1 a {
   color: #000000;
 }
 
+.nav_bar {
+  z-index: 2;
+}
 .nav_bar ul {
   display: flex;
   list-style: none;
@@ -60,9 +76,10 @@ h1 a {
   color: black;
   text-decoration: none;
   padding: 10px 20px;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   font-weight: 500;
   transition: all 0.3s ease;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 .nav_bar a:hover {
   background: rgb(252, 230, 106);
@@ -167,6 +184,45 @@ h1 a {
 }
 .footer a:hover {
   color: rgb(252, 230, 106);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: rgb(252, 230, 106);
+}
+
+.required:after {
+  content: " *";
+  color: red;
 }
 
 /*# sourceMappingURL=escuela.css.map */
