@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Güechas F.C.</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/tienda.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
@@ -13,40 +13,55 @@
 
 <!-- Home -->
 
-<header>
-    <img src="" alt="">
-    <h1 id="titulo_home">
-        <a href="..//Home/index.html" target="_blank" class="link_home">Geüechas F.C.</a>
-        <img class="fondo" src="./PreEntrega1_Ramirez_Felipe/Guechas/Home/Hinchas.png" alt="">
-</header>
-
 <body>
-    <ul>
-        <nav>
-            Equipaciones
-            Moda
-            Accesorios
+    <header>
+        <div class="escudo">
+            <img src="../assets/Guechas/Home/guechas_1.png" alt="Escudo" width="200px" height="250px">
+            <img class="fondo" src="../assets/Guechas/Home/hinchas.png" alt="">
+        </div>
+    </header>
+    <section class="encabezado">
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="nav_bar">
+            <ul>
+                <li><a href="../index.html" target="">Home</a></li>
+                <li><a href="../pages/equipo_profesional.html" target="">Equipo Profesional</a></li>
+                <li><a href="../pages/escuela.html" target="">Escuela</a></li>
+                <li><a href="../pages/socios.html" target="">Socios</a></li>
+            </ul>
         </nav>
-    </ul>
+    </section>
 
+    <section class="ventas_cat">
+        <ul>
+            <li>Equipaciones </li>
+            <li>Moda</li>
+            <li>Accesorios</li>
+        </ul>
+    </section>
+   
     <!--Temporadaa5-->
 
-    <section class="Temporada_24/25">
+    <section class="temp_24/25">
         <h2>Temporada_24/25</h2>
         <H3></H3>
         <img src="Uniforme_Local.png" alt="Local" width="300px" height="250px">
-        <img src="" alt="Visitante">
+        <img src="" alt="visitante">
         <img src="" alt="tercer uniforme">
     </section>
 
-    <section class="Temporadas Anteriores">
+    <section class="tenp-anteriores">
         <h2>Temporadas Anteriores</h2>
         <H3></H3>
         <img src="" alt="90´s" width="300px" height="250px">
         <img src="" alt="00´">
         <img src="" alt="80´s">
     </section>
-    <section class="Lo más vendido">
+    <section class="lo_mas_vendido">
         <h2>Lo más vendido</h2>
         <H3></H3>
         <img src="" alt="Local" width="300px" height="250px">
@@ -54,10 +69,11 @@
         <img src="" alt="Lo más vendido">
     </section>
     <footer>
-        <ul>
-            Contáctanos
-            Ubicación
-            Patrocinio
+        <ul class="footer-links">
+            <li><a href="#">Contáctanos</a></li>
+            <li><a href="#">Ubicación</a></li>
+            <li><a href="#">Patrocinio</a></li>
         </ul>
+        <p class="copyright">&copy; 2023 Güechas F.C. Todos los derechos reservados.</p>
     </footer>
 </body>
