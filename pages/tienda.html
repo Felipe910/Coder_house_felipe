@@ -44,31 +44,124 @@
         </ul>
     </section>
    
-    <!--Temporadaa5-->
-
-    <section class="temp_24/25">
-        <h2>Temporada_24/25</h2>
-        <H3></H3>
-        <img src="Uniforme_Local.png" alt="Local" width="300px" height="250px">
-        <img src="" alt="visitante">
-        <img src="" alt="tercer uniforme">
+    <!-- Categorías de productos -->
+    <section class="categorias">
+        <div class="container">
+            <h2 class="section-title">Explora nuestras colecciones</h2>
+            <div class="categorias-grid">
+                <div class="categoria-card">
+                    <img src="../assets/tienda/equipaciones.jpg" alt="Equipaciones">
+                    <h3>Equipaciones</h3>
+                    <a href="#temporada-actual" class="btn">Ver colección</a>
+                </div>
+                <div class="categoria-card">
+                    <img src="../assets/tienda/moda.jpg" alt="Moda">
+                    <h3>Moda</h3>
+                    <a href="#" class="btn">Ver colección</a>
+                </div>
+                <div class="categoria-card">
+                    <img src="../assets/tienda/accesorios.jpg" alt="Accesorios">
+                    <h3>Accesorios</h3>
+                    <a href="#" class="btn">Ver colección</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="tenp-anteriores">
-        <h2>Temporadas Anteriores</h2>
-        <H3></H3>
-        <img src="" alt="90´s" width="300px" height="250px">
-        <img src="" alt="00´">
-        <img src="" alt="80´s">
+    <!-- Temporada actual -->
+    <section id="temporada-actual" class="temporada-actual">
+        <div class="container">
+            <h2 class="section-title">Temporada 2024/25</h2>
+            <div class="productos-grid">
+                <div class="producto-card">
+                    <img src="../assets/tienda/Uniforme_Local.png" alt="Equipación Local Temporada 24/25">
+                    <h3>Equipación Local</h3>
+                    <p class="precio">€79.99</p>
+                    <button class="btn agregar-carrito" data-producto="Equipación Local 24/25">Añadir al carrito</button>
+                </div>
+                <div class="producto-card">
+                    <img src="../assets/tienda/Uniforme_Visitante.png" alt="Equipación Visitante Temporada 24/25">
+                    <h3>Equipación Visitante</h3>
+                    <p class="precio">€79.99</p>
+                    <button class="btn agregar-carrito" data-producto="Equipación Visitante 24/25">Añadir al carrito</button>
+                </div>
+                <div class="producto-card">
+                    <img src="../assets/tienda/Uniforme_Tercera.png" alt="Tercera Equipación Temporada 24/25">
+                    <h3>Tercera Equipación</h3>
+                    <p class="precio">€89.99</p>
+                    <button class="btn agregar-carrito" data-producto="Tercera Equipación 24/25">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="lo_mas_vendido">
-        <h2>Lo más vendido</h2>
-        <H3></H3>
-        <img src="" alt="Local" width="300px" height="250px">
-        <img src="" alt="00´">
-        <img src="" alt="Lo más vendido">
+
+    <!-- Temporadas anteriores -->
+    <section class="temporadas-anteriores">
+        <div class="container">
+            <h2 class="section-title">Temporadas anteriores</h2>
+            <div class="productos-grid">
+                <div class="producto-card">
+                    <img src="../assets/tienda/90s.jpg" alt="Equipación años 90">
+                    <h3>Edición 90's</h3>
+                    <p class="precio">€69.99</p>
+                    <button class="btn agregar-carrito" data-producto="Equipación 90's">Añadir al carrito</button>
+                </div>
+                <div class="producto-card">
+                    <img src="../assets/tienda/00s.jpg" alt="Equipación años 2000">
+                    <h3>Edición 2000's</h3>
+                    <p class="precio">€69.99</p>
+                    <button class="btn agregar-carrito" data-producto="Equipación 2000's">Añadir al carrito</button>
+                </div>
+                <div class="producto-card">
+                    <img src="../assets/tienda/80s.jpg" alt="Equipación años 80">
+                    <h3>Edición 80's</h3>
+                    <p class="precio">€69.99</p>
+                    <button class="btn agregar-carrito" data-producto="Equipación 80's">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
     </section>
-    <footer>
+
+    <!-- Más vendidos -->
+    <section class="mas-vendidos">
+        <div class="container">
+            <h2 class="section-title">Lo más vendido</h2>
+            <div class="productos-grid">
+                <div class="producto-card destacado">
+                    <span class="badge">BEST SELLER</span>
+                    <img src="../assets/tienda/bufanda.jpg" alt="Bufanda oficial">
+                    <h3>Bufanda Oficial</h3>
+                    <p class="precio">€24.99</p>
+                    <button class="btn agregar-carrito" data-producto="Bufanda Oficial">Añadir al carrito</button>
+                </div>
+                <div class="producto-card">
+                    <img src="../assets/tienda/gorra.jpg" alt="Gorra oficial">
+                    <h3>Gorra Oficial</h3>
+                    <p class="precio">€29.99</p>
+                    <button class="btn agregar-carrito" data-producto="Gorra Oficial">Añadir al carrito</button>
+                </div>
+                <div class="producto-card">
+                    <img src="../assets/tienda/mochila.jpg" alt="Mochila oficial">
+                    <h3>Mochila Oficial</h3>
+                    <p class="precio">€49.99</p>
+                    <button class="btn agregar-carrito" data-producto="Mochila Oficial">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h3>¡No te pierdas nuestros lanzamientos!</h3>
+            <p>Suscríbete para recibir ofertas exclusivas y novedades de la tienda.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
         <ul class="footer-links">
             <li><a href="#">Contáctanos</a></li>
             <li><a href="#">Ubicación</a></li>

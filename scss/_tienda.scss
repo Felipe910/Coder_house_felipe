@@ -1,5 +1,5 @@
 $primary-color: #2c3e50;
-$secondary-color: #e74c3c;
+$secondary-color:rgb(252, 230, 106);
 $accent-color: rgb(252, 230, 106);
 $text-color: #333;
 $light-bg: #f9f9f9;
@@ -9,11 +9,16 @@ $footer-bg: #333;
 $border-radius: 8px;
 $card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 $accent-color: rgb(252, 230, 106);
+$dark-color: #212529;
+$light-color: #f8f9fa;
+$font-title: 'Kumar One', cursive;
 
 $mobile-breakpoint: 480px;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1200px;
-
+$font-body: 'Open Sans', sans-serif;
+$breakpoint-tablet: 992px;
+$breakpoint-mobile: 768px;
 $transition-fast: 0.2s ease;
 $transition-medium: 0.3s ease;
 
@@ -121,5 +126,390 @@ body {
             transform: scale(1.0);
             border-radius: 30px;
         }
+    }
+}
+
+/* Mixins */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@mixin transition($property: all) {
+  transition: $property 0.3s ease;
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-body;
+  color: $dark-color;
+  line-height: 1.6;
+  background-color: $light-color;
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-title;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  @include transition;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: $secondary-color;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  @include transition;
+  @include box-shadow;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+    transform: translateY(-2px);
+  }
+}
+
+/* Header */
+.header-tienda {
+  background-color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  @include box-shadow;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .escudo img {
+    height: 80px;
+    width: auto;
+    @include transition;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+  
+/* Menú móvil */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+
+  .bar {
+    height: 3px;
+    width: 100%;
+    background-color: $dark-color;
+    border-radius: 10px;
+    @include transition;
+  }
+}
+
+/* Secciones comunes */
+.section-title {
+  text-align: center;
+  margin: 3rem 0;
+  font-size: 2.5rem;
+  color: $primary-color;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: $secondary-color;
+    margin: 1rem auto;
+  }
+}
+
+/* Grid de productos */
+.productos-grid, .categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Tarjetas */
+.producto-card, .categoria-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  @include box-shadow;
+  @include transition;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    margin-top: 1rem;
+  }
+
+  .precio {
+    font-weight: 700;
+    color: $secondary-color;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .btn {
+    display: block;
+    margin: 1rem;
+    text-align: center;
+  }
+}
+
+/* Producto destacado */
+.producto-card.destacado {
+  position: relative;
+
+  .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: $secondary-color;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}
+
+/* Categorías */
+.categoria-card {
+  text-align: center;
+
+  h3 {
+    margin: 1rem 0;
+  }
+
+  .btn {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: $primary-color;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+
+    input {
+      flex: 1;
+      padding: 1rem;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 1rem;
+    }
+
+    button {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
+
+/* Footer */
+.footer-tienda {
+  background-color: $dark-color;
+  color: white;
+  padding: 3rem 0 0;
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  h4 {
+    color: $light-color;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 0.8rem;
+
+      a:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .payment-methods {
+      i {
+        font-size: 1.8rem;
+        margin-left: 0.8rem;
+        opacity: 0.8;
+        @include transition;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+/* Temporadas */
+.temporada-actual {
+  background-color: rgba($primary-color, 0.05);
+  padding: 3rem 0;
+}
+
+/* Responsive */
+@media (max-width: $breakpoint-tablet) {
+  .banner-tienda {
+    height: 300px;
+
+    .banner-content h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+// =================== FOOTER ===================
+.footer {
+    background-color: $footer-bg;
+    color: white;
+    padding: 40px 5%;
+    text-align: center;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        gap: 30px;
+        margin-bottom: 20px;
+
+        @media (max-width: $tablet-breakpoint) {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: color $transition-fast;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}
+
+.copyright {
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+// =================== RESPONSIVE ===================
+@media (max-width: $tablet-breakpoint) {
+    .escudo img {
+        width: 120px;
+        height: 150px;
+    }
+    .escudo .fondo {
+        height: 120px;
+    }
+    .tier_Suscripcion {
+        padding: 1rem 0.5rem;
+    }
+    .guechas_tv video {
+        height: 180px;
+    }
+    .Ingreso_socios .login-form {
+        padding: 1rem 0.5rem;
     }
 }
