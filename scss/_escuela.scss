@@ -2,8 +2,43 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fafafa;
 }
 
+// =================== ESCUDO ===================
+.escudo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    min-height: 250px;
+
+    img {
+        width: 200px;
+        height: 250px;
+        object-fit: contain;
+        z-index: 2;
+        position: relative;
+    }
+
+    .fondo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        max-width: 1200px;
+        height: 220px;
+        object-fit: cover;
+        opacity: 0.7;
+        z-index: 1;
+        border-radius: 20px;
+        pointer-events: none;
+    }
+}
+
+// =================== ENCABEZADO Y NAV ===================
 .encabezado {
     display: flex;
     flex-direction: column;
@@ -11,82 +46,43 @@ body {
     padding: 30px 5%;
 }
 
-h1 a {
-    color: black;
-    text-decoration: none;
-    font-family: "Kumar One", serif;
-    font-size: 1.6rem;
-    margin: 10px 0;
-}
-
-.escudo {
-    display: flex;
-    margin-bottom: 15px;
-    justify-content: center;
-
-    img {
-        width: 200px;
-        height: 250px;
-        object-fit: contain;
-        z-index: 2;
-    }
-
-    .fondo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 35%;
-        object-fit: cover;
-        opacity: 0.7;
-        z-index: 1;
-    }
-}
-
-.fotografias {
-    h2 {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-        color: #000000;
-    }
-}
-
 .nav_bar {
     z-index: 2;
+
     ul {
         display: flex;
         list-style: none;
         padding: 0;
         margin: 30px 0;
         gap: 20px;
-        z-index: 2;
     }
 
     a {
         color: black;
         text-decoration: none;
         padding: 10px 20px;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         font-weight: 500;
-        transition: all 0.3s ease;
-        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; 
+        border-radius: 30px;
+        transition: background 0.3s, color 0.3s, transform 0.2s;
+        text-shadow: 0 1px 2px #fff;
     }
 
-    a:hover {
+    a:hover, a:focus {
         background: rgb(252, 230, 106);
-        transform: scale(1.05);
-        border-radius: 30px;
+        color: #000;
+        transform: scale(1.07);
+        outline: none;
     }
 }
 
+// =================== ESCUELA ===================
 .escuela {
-
     h2 {
         text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-        color: #000000;
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        color: #000;
     }
 }
 
@@ -96,133 +92,183 @@ h1 a {
         justify-content: center;
         list-style: none;
         padding: 0;
-        gap: 40px;
+        gap: 30px;
         flex-wrap: wrap;
-    }
-
-
-    img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px;
     }
 
     li {
         background: #f0f0f0;
         padding: 15px 20px;
         border-radius: 30px;
-        font-size: 1.2rem;
-        transition: all 0.3s ease;
+        font-size: 1.1rem;
+        transition: background 0.3s, transform 0.2s;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            background: rgb(252, 230, 106);
+            transform: scale(1.05);
+        }
     }
 
-    li:hover {
-        background: rgb(252, 230, 106);
-        transform: scale(1.05);
+    img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto 10px auto;
     }
 }
 
-.vision {
+// =================== MISION Y VISION ===================
+.mision, .vision {
     padding: 30px 5%;
     background: linear-gradient(to right, #ffffff, rgb(252, 230, 106));
 
     h2 {
         text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-        color: #000000;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        color: #000;
     }
 
     p {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         line-height: 1.6;
         color: #444;
         text-align: justify;
+        max-width: 700px;
+        margin: 0 auto;
     }
 }
-    .mision {
-        padding: 30px 5%;
-        background: linear-gradient(to right, #ffffff, rgb(252, 230, 106));
-        
 
-        h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: #000000;
-        }
+// =================== INSCRIPCIONES ===================
+.inscripciones {
+    padding: 30px 5%;
 
-        p {
-            font-size: 1.5rem;
-            line-height: 1.6;
-            color: #444;
-            text-align: justify;
-        }
-    }
-    .inscripciones{
-        h2{
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: #000000;  
-        }
-    }
-    .footer{
-        background-color: #333;
-        color: white;
-        padding: 40px 5%;
+    h2 {
         text-align: center;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        color: #000;
+    }
 
-        ul{
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-        a{
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
-        a:hover {
-            color: rgb(252, 230, 106);
-        }
-        
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
     }
-    .form-group {
-        margin-bottom: 15px;
+
+    li {
+        margin-bottom: 18px;
     }
+
     label {
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 6px;
         font-weight: bold;
+        color: #222;
     }
-    input, select, textarea {
+
+    input, textarea {
         width: 100%;
         padding: 8px;
         border: 1px solid #ccc;
-        border-radius: 4px;
+        border-radius: 6px;
+        font-size: 1rem;
+        resize: vertical;
+        transition: border 0.2s;
     }
+
+    input:focus, textarea:focus {
+        border: 1.5px solid rgb(252, 230, 106);
+        outline: none;
+    }
+
     button {
-        background-color:white;
+        background-color: white;
         color: black;
-        padding: 10px 20px;
+        padding: 10px 24px;
         border: none;
-        border-radius: 4px;
+        border-radius: 6px;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 1.1rem;
         display: block;
-        margin: 20px auto;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        transition: background 0.3s, color 0.3s;
     }
+
     button:hover {
         background-color: rgb(252, 230, 106);
+        color: #000;
     }
-    .required:after {
-        content: " *";
-        color: red;
+}
+
+// =================== FOOTER ===================
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 5%;
+    text-align: center;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        gap: 30px;
+        margin-bottom: 20px;
     }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+    }
+
+    a:hover {
+        color: rgb(252, 230, 106);
+    }
+}
+
+.copyright {
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+// =================== RESPONSIVE ===================
+@media (max-width: 900px) {
+    .eventos_escuela ul {
+        gap: 15px;
+    }
+    .escudo img {
+        width: 120px;
+        height: 150px;
+    }
+    .escudo .fondo {
+        height: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .encabezado {
+        padding: 15px 2%;
+    }
+    .nav_bar ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0 0 0;
+    }
+    .eventos_escuela img {
+        height: 100px;
+    }
+    .mision, .vision, .inscripciones {
+        padding: 15px 2%;
+    }
+    .footer {
+        padding: 20px 2%;
+    }
+}

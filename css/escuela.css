@@ -2,6 +2,37 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fafafa;
+}
+
+.escudo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  min-height: 250px;
+}
+.escudo img {
+  width: 200px;
+  height: 250px;
+  object-fit: contain;
+  z-index: 2;
+  position: relative;
+}
+.escudo .fondo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: 1200px;
+  height: 220px;
+  object-fit: cover;
+  opacity: 0.7;
+  z-index: 1;
+  border-radius: 20px;
+  pointer-events: none;
 }
 
 .encabezado {
@@ -9,56 +40,6 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 30px 5%;
-}
-
-.escudo {
-  display: flex;
-  margin-bottom: 10px;
-  margin-top: 20px;
-  justify-content: center;
-}
-.escudo img {
-  width: 200px;
-  height: 250px;
-  object-fit: contain;
-  z-index: 2;
-}
-
-h1 a {
-  color: black;
-  text-decoration: none;
-  font-family: "Kumar One", serif;
-  font-size: 1.6rem;
-  margin: 10px 0;
-}
-
-.escudo {
-  display: flex;
-  margin-bottom: 15px;
-  justify-content: center;
-}
-.escudo img {
-  width: 200px;
-  height: 250px;
-  object-fit: contain;
-  z-index: 2;
-}
-.escudo .fondo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 35%;
-  object-fit: cover;
-  opacity: 0.7;
-  z-index: 1;
-}
-
-.fotografias h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #000000;
 }
 
 .nav_bar {
@@ -70,28 +51,29 @@ h1 a {
   padding: 0;
   margin: 30px 0;
   gap: 20px;
-  z-index: 2;
 }
 .nav_bar a {
   color: black;
   text-decoration: none;
   padding: 10px 20px;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  transition: all 0.3s ease;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
-}
-.nav_bar a:hover {
-  background: rgb(252, 230, 106);
-  transform: scale(1.05);
   border-radius: 30px;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  text-shadow: 0 1px 2px #fff;
+}
+.nav_bar a:hover, .nav_bar a:focus {
+  background: rgb(252, 230, 106);
+  color: #000;
+  transform: scale(1.07);
+  outline: none;
 }
 
 .escuela h2 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #000000;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #000;
 }
 
 .eventos_escuela ul {
@@ -99,67 +81,101 @@ h1 a {
   justify-content: center;
   list-style: none;
   padding: 0;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
-}
-.eventos_escuela img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
 }
 .eventos_escuela li {
   background: #f0f0f0;
   padding: 15px 20px;
   border-radius: 30px;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  transition: background 0.3s, transform 0.2s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .eventos_escuela li:hover {
   background: rgb(252, 230, 106);
   transform: scale(1.05);
 }
+.eventos_escuela img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
 
-.vision {
+.mision, .vision {
   padding: 30px 5%;
   background: linear-gradient(to right, #ffffff, rgb(252, 230, 106));
 }
-.vision h2 {
+.mision h2, .vision h2 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #000000;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #000;
 }
-.vision p {
-  font-size: 1.5rem;
+.mision p, .vision p {
+  font-size: 1.1rem;
   line-height: 1.6;
   color: #444;
   text-align: justify;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.mision {
+.inscripciones {
   padding: 30px 5%;
-  background: linear-gradient(to right, #ffffff, rgb(252, 230, 106));
 }
-.mision h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #000000;
-}
-.mision p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  color: #444;
-  text-align: justify;
-}
-
 .inscripciones h2 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #000000;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #000;
+}
+.inscripciones ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+.inscripciones li {
+  margin-bottom: 18px;
+}
+.inscripciones label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #222;
+}
+.inscripciones input, .inscripciones textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border 0.2s;
+}
+.inscripciones input:focus, .inscripciones textarea:focus {
+  border: 1.5px solid rgb(252, 230, 106);
+  outline: none;
+}
+.inscripciones button {
+  background-color: white;
+  color: black;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s, color 0.3s;
+}
+.inscripciones button:hover {
+  background-color: rgb(252, 230, 106);
+  color: #000;
 }
 
 .footer {
@@ -180,49 +196,48 @@ h1 a {
   color: white;
   text-decoration: none;
   font-size: 1.1rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 .footer a:hover {
   color: rgb(252, 230, 106);
 }
 
-.form-group {
-  margin-bottom: 15px;
+.copyright {
+  margin-top: 20px;
+  color: #aaa;
+  font-size: 0.9rem;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+@media (max-width: 900px) {
+  .eventos_escuela ul {
+    gap: 15px;
+  }
+  .escudo img {
+    width: 120px;
+    height: 150px;
+  }
+  .escudo .fondo {
+    height: 120px;
+  }
 }
-
-input, select, textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  background-color: white;
-  color: black;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  display: block;
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-button:hover {
-  background-color: rgb(252, 230, 106);
-}
-
-.required:after {
-  content: " *";
-  color: red;
+@media (max-width: 600px) {
+  .encabezado {
+    padding: 15px 2%;
+  }
+  .nav_bar ul {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0 0 0;
+  }
+  .eventos_escuela img {
+    height: 100px;
+  }
+  .mision, .vision, .inscripciones {
+    padding: 15px 2%;
+  }
+  .footer {
+    padding: 20px 2%;
+  }
 }
 
 /*# sourceMappingURL=escuela.css.map */

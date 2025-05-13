@@ -3,6 +3,38 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fafafa;
+}
+
+/* Escudo y fondo */
+.escudo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 10px 0;
+    min-height: 250px;
+}
+.escudo img:not(.fondo) {
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
+    z-index: 2;
+    position: relative;
+}
+.escudo .fondo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    max-width: 1200px;
+    height: 220px;
+    object-fit: cover;
+    opacity: 0.5;
+    z-index: 1;
+    border-radius: 20px;
+    pointer-events: none;
 }
 
 /* Header */
@@ -10,74 +42,50 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px 0 0 0;
 }
 
-.escudo {
-    display: flex;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    justify-content: center;
-}
-
-.escudo img {
-    width: 200px;
-    height: 250px;
-    object-fit: contain;
-    z-index: 2;
-}
-.escudo .fondo{
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 35%;
-    object-fit: cover; 
-    opacity: 0.7; 
-    z-index: 1;
-    border-bottom: 1.9rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-}
-.nav_bar{
-    z-index: 1;
-    
-}
 .nav_bar ul {
     display: flex;
     list-style: none;
     padding: 0;
-    margin: 50px 0;
+    margin: 30px 0 0 0;
     gap: 20px;
     z-index: 2;
 }
 
 .nav_bar a {
-    color:black;
+    color: #222;
     text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1.6rem;
+    padding: 10px 24px;
+    font-size: 1.2rem;
     font-weight: 500;
-    transition: all 0.3s ease;
-    z-index: 2;
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; 
+    border-radius: 30px;
+    background: transparent;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    text-shadow: 0 1px 2px #fff;
 }
 
-.nav_bar a:hover {
-    background: rgb(252, 230, 106);
-    transform: scale(1.05);
-    border-radius: 30px;
+.nav_bar a:hover,
+.nav_bar a:focus {
+    background: rgb(248, 221, 70);
+    color: #000;
+    transform: scale(1.07);
+    outline: none;
 }
 
 /* Noticias */
 .noticias {
     padding: 30px 5%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .noticias h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #000000;
+    color: #000;
 }
 
 .noticia {
@@ -86,22 +94,22 @@ body {
     gap: 30px;
     margin-bottom: 50px;
     padding: 30px;
-    border-radius:30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 30px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    background: #fff;
+    transition: box-shadow 0.3s, background 0.3s, transform 0.2s;
 }
 .noticia:hover {
-    background: rgb(252, 230, 106);
-    transform: scale(1.05);
-    border-radius: 30px;
-    transition: all 0.3s ease;
+    background: rgb(252, 230, 106, 0.15);
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
 .noticia h3 {
     font-size: 1.8rem;
     margin-top: 0;
     color: #222;
-    text-align:center;
-    
+    text-align: center;
 }
 
 .noticia p {
@@ -111,26 +119,24 @@ body {
     text-align: justify;
 }
 
-.contenido-noticia img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
+.contenido-noticia img,
 .contenido-noticia video {
     width: 100%;
+    max-height: 350px;
+    object-fit: cover;
     border-radius: 10px;
+    margin-top: 15px;
 }
 
 .contenido-noticia audio {
     width: 100%;
+    margin-top: 15px;
 }
 
 /* Eventos */
 .eventos {
     padding: 30px 5%;
-    background: linear-gradient(to right, #ffffff, rgb(252, 230, 106));    
+    background: linear-gradient(to right, #ffffff, rgb(248, 221, 70));
 }
 
 .eventos h2 {
@@ -157,12 +163,13 @@ body {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .evento:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
 }
 
 .evento img {
@@ -183,6 +190,7 @@ body {
 .historia {
     padding: 50px 5%;
     text-align: center;
+    background: #fff;
 }
 
 .historia h2 {
@@ -205,11 +213,11 @@ body {
     padding: 15px 20px;
     border-radius: 30px;
     font-size: 1.2rem;
-    transition: all 0.3s ease;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .linea-tiempo li:hover {
-    background: rgb(252, 230, 106);
+    background: rgb(248, 221, 70);
     transform: scale(1.05);
 }
 
@@ -218,7 +226,7 @@ body {
     color: #333;
     font-weight: 500;
 }
-.linea-tiempo img{
+.linea-tiempo img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -246,11 +254,11 @@ footer {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 .footer-links a:hover {
-    color: rgb(252, 230, 106);
+    color: rgb(248, 221, 70);
 }
 
 .copyright {
@@ -259,17 +267,17 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Estilos Pagina 2 (equipo profesional) */
-
+/* Página Equipo Profesional */
 .equipo-profesional {
     padding: 40px 5%;
+    background: #fff;
 }
 
 .equipo-profesional h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #000000;
+    color: #000;
 }
 
 .equipo-profesional h3 {
@@ -278,149 +286,90 @@ footer {
     color: #222;
     text-align: center;
 }
-.equipo-profesional p{
-    font-size: smaller;
+.equipo-profesional p {
+    font-size: 1rem;
     padding: 0;
     margin: 0;
 }
 
-.plantilla .porteros {
+.plantilla {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 30px;
 }
-
-.plantilla .defensores {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    
-}
-
-.plantilla .centrocampistas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.plantilla .delanteros {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
 
 .plantilla ul {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s, background 0.3s;
     list-style: none;
     text-align: center;
+    padding: 20px 0;
+    margin: 0;
 }
-.plantilla .porteros img {
-    width: 15%;
-    height: 300px;
-    object-fit:cover;
-    border-radius: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.portero-1{
-    align-items: center;
-    text-align: center;
-}
-
-.plantilla .delanteros img {
-    width: 20%;
-    height: 400px;
-    object-fit:cover;
-    border-radius: 40px;
-    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.1);
-    padding-top: 15px;
-}
-.delantero-1{
-    align-items: center;
-    text-align: center;
-}
-.delantero-2{
-    align-items: center;
-    text-align: center;
-}
-.plantilla .defensores{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .plantilla ul:hover {
-    transform: translateY(-5px);
-    background: rgb(252, 230, 106);
-    transform: scale(1.05);
-    border-radius: 30px;
-    transition: all 0.3s ease;
+    background: rgb(252, 230, 106, 0.15);
+    transform: scale(1.03);
 }
 
 .plantilla img {
-    width: 40%;
-    height: 400px;
-    object-fit:cover;
-    border-radius: 40px;
-    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.1);
-    padding-top: 15px;
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.bastion_güecha h2 {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        color: #333;
-}
-
+/* Estadio */
 .bastion_güecha {
     padding: 30px 5%;
-    background: linear-gradient(to right, #ffffff, rgb(252, 230, 106));    
+    background: linear-gradient(to right, #ffffff, rgb(248, 221, 70));
+}
+.bastion_güecha h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
 }
 .estadio {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
-    .estadio .terreno{
-        background: white;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-    }
-    
-    .estadio .terreno:hover {
-        transform: translateY(-5px);
-    }
-    
-    .estadio .terreno img {
-        width: 100%;
-        height: 200px;
-        object-fit:cover
-    }
-    
-    .estadio p {
-        padding: 20px;
-        font-size: 1.1rem;
-        line-height: 1.5;
-        color: #444;
-        margin: 0;
-        text-align: center;
-    }
+.estadio .terreno {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+.estadio .terreno:hover {
+    transform: translateY(-5px) scale(1.03);
+}
+.estadio .terreno img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.estadio p {
+    padding: 20px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #444;
+    margin: 0;
+    text-align: center;
+}
 
-/*palmares*/
-
-
+/* Palmares */
 .palmares h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
     color: #333;
     text-align: center;
 }
-
 .copas ul {
     display: flex;
     justify-content: center;
@@ -429,51 +378,63 @@ footer {
     gap: 40px;
     flex-wrap: wrap;
 }
-.copas p{
+.copas p {
     text-align: center;
 }
-
 .copas li {
     background: #f0f0f0;
     padding: 15px 20px;
     border-radius: 30px;
     font-size: 1.2rem;
-    transition: all 0.3s ease;
+    transition: background 0.3s, transform 0.2s;
 }
-
 .copas li:hover {
-    background: rgb(252, 230, 106);
+    background: rgb(248, 221, 70);
     transform: scale(1.05);
 }
-
-
-.copas a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-.copas img{
+.copas img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .noticia {
         grid-template-columns: 1fr;
     }
-
-    .nav_bar ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .lista-eventos {
         grid-template-columns: 1fr;
     }
+    .linea-tiempo ul {
+        gap: 20px;
+    }
+    .copas ul {
+        gap: 20px;
+    }
 }
-.plantilla {
-    grid-template-columns: 1fr;
+
+@media (max-width: 600px) {
+    .escudo img:not(.fondo) {
+        width: 120px;
+        height: 150px;
+    }
+    .escudo .fondo {
+        height: 120px;
+    }
+    .noticias, .eventos, .historia, .equipo-profesional, .bastion_güecha, .palmares {
+        padding: 15px 2%;
+    }
+    .noticias h2, .eventos h2, .historia h2, .equipo-profesional h2, .palmares h2 {
+        font-size: 1.5rem;
+    }
+    .nav_bar ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0 0 0;
+    }
+    .plantilla img {
+        width: 80px;
+        height: 100px;
+    }
 }

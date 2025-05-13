@@ -4,94 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Güechas F.C.</title>
+    <title>Güechas F.C. - Socios</title>
     <link rel="stylesheet" href="../css/socios.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
 </head>
 
-<!-- Home -->
-
 <body>
     <header>
         <div class="escudo">
-            <img src="../assets/Guechas/Home/guechas_1.png" alt="Escudo" width="200px" height="250px">
-            <img class="fondo" src="../assets/Guechas/Home/hinchas.png" alt="">
+            <img src="../assets/Guechas/Home/guechas_1.png" alt="Escudo de Güechas F.C." width="200" height="250">
+            <img class="fondo" src="../assets/Guechas/Home/hinchas.png" alt="Hinchas de Güechas F.C.">
         </div>
+        <section class="encabezado">
+            <div class="menu-toggle" aria-label="Abrir menú de navegación" tabindex="0">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="nav_bar">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/equipo_profesional.html">Equipo Profesional</a></li>
+                    <li><a href="../pages/escuela.html">Escuela</a></li>
+                    <li><a href="../pages/tienda.html">Tienda</a></li>
+                </ul>
+            </nav>
+        </section>
     </header>
-    <section class="encabezado">
-        <div class="menu-toggle">
-  <div class="bar"></div>
-  <div class="bar"></div>
-  <div class="bar"></div>
-</div>
-        <nav class="nav_bar">
-            <ul>
-                <li><a href="../index.html" target="">Home</a></li>
-                <li><a href="../pages/equipo_profesional.html" target="">Equipo Profesional</a></li>
-                <li><a href="../pages/escuela.html" target="">Escuela</a></li>
-                <li><a href="../pages/tienda.html" target="">Tienda</a></li>
 
-            </ul>
-        </nav>
-    </section>
+    <main>
+        <!-- Tiers de Suscripción -->
+        <section class="tier_Suscripcion">
+            <h2>Sé parte de nuestra Historia</h2>
+            <div class="tiers">
+                <article class="tier">
+                    <h3>Güechas Essencial</h3>
+                    <img src="../assets/Guechas/Socios/socios.png" alt="Socios compartiendo">
+                    <p>
+                        El punto de partida perfecto para explorar nuestro mundo. Con Güechas Essencial obtienes acceso básico a
+                        contenido exclusivo, descuentos iniciales y una probadita de lo mejor que ofrecemos. Ideal para quienes
+                        quieren conocer sin comprometerse aún.
+                    </p>
+                    <button>Comprar</button>
+                </article>
+                <article class="tier">
+                    <h3>Güechas Premium</h3>
+                    <img src="../assets/Guechas/Socios/premium.png" alt="Socios premium">
+                    <p>
+                        La experiencia completa para quienes quieren vivir al máximo. Acceso prioritario, beneficios exclusivos cada
+                        mes, descuentos superiores y contenido behind-the-scenes. Para los que no se conforman con menos que lo
+                        mejor.
+                    </p>
+                    <button>Comprar</button>
+                </article>
+                <article class="tier">
+                    <h3>Güechas Junior</h3>
+                    <img src="../assets/Guechas/Socios/junior.png" alt="Socios junior">
+                    <p>
+                        Diversión segura y educativa para las nuevas generaciones. Contenido adaptado para niños, controles
+                        parentales y actividades interactivas que entretienen mientras enseñan. La membresía perfecta para futuros
+                        superfans.
+                    </p>
+                    <button>Comprar</button>
+                </article>
+            </div>
+        </section>
 
-    <!--Tier_Suscripción-->
+        <!-- Güechas TV -->
+        <section class="guechas_tv">
+            <h2>Güechas TV</h2>
+            <video src="" controls poster="../assets/Guechas/Socios/tv_placeholder.png">
+            </video>
+        </section>
 
-    <section class="tier_Suscripción">
-        <h2>Se parte de nuestra Historia</h2>
-        <ul>
-            <li>Güechas Essencial</li>
-            <li><img src="socios.png" alt="Imagen de Socios compartiendo"></li>
-        </ul>
-        <p>El punto de partida perfecto para explorar nuestro mundo. Con Güechas Essencial obtienes acceso básico a
-            contenido exclusivo, descuentos iniciales y una probadita de lo mejor que ofrecemos. Ideal para quienes
-            quieren conocer sin comprometerse aún</p>
-        <button>Comprar</button>
-        <ul>
-            <li>
-                Güechas Premium
-            </li>
-            <li><img src="" alt=""></li>
-        </ul>
-        <p>La experiencia completa para quienes quieren vivir al máximo. Acceso prioritario, beneficios exclusivos cada
-            mes, descuentos superiores y contenido behind-the-scenes. Para los que no se conforman con menos que lo
-            mejor..</p>
-        <button>Comprar</button>
-        <ul>
-            <li>Güechas Junior</li>
-            <li><img src="" alt=""></li>
-        </ul>
-        <p>Diversión segura y educativa para las nuevas generaciones. Contenido adaptado para niños, controles
-            parentales y actividades interactivas que entretienen mientras enseñan. La membresía perfecta para futuros
-            superfans</p>
-        <button>Comprar</button>
-    </section>
+        <!-- Ingreso Socios -->
+        <section class="Ingreso_socios">
+            <div class="login-form">
+                <h2>Iniciar Sesión</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="username">Usuario</label>
+                        <input type="text" id="username" placeholder="Ingresa tu usuario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
+                    </div>
+                    <button type="submit" class="signin-btn">Iniciar Sesión</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-
-
-    <section class="guechas_tv">
-        <h2>Geüechas TV</h2>
-        <li><video src="" controls></video></li>
-    </section>
-
-    <section class="Ingreso_socios">
-        <div class="login-form">
-            <h2>Iniciar Sesión</h2>
-            <form>
-                <div class="form-group">
-                    <label for="username">Usuario</label>
-                    <input type="text" id="username" placeholder="Ingresa tu usuario">
-                </div>
-                <div class="form-group">
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" placeholder="Ingresa tu contraseña">
-                </div>
-                <button type="submit" class="signin-btn">Sign In</button>
-            </form>
-        </div>
-    </section>
     <footer class="footer">
         <ul class="footer-links">
             <li><a href="#">Contáctanos</a></li>
@@ -100,5 +106,6 @@
         </ul>
         <p class="copyright">&copy; 2023 Güechas F.C. Todos los derechos reservados.</p>
     </footer>
-
 </body>
+
+</html>
