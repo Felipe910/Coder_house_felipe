@@ -102,14 +102,14 @@ body {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #212529;
   line-height: 1.6;
   background-color: #f8f9fa;
 }
 
 h1, h2, h3, h4 {
-  font-family: "Kumar One", cursive;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 1rem;
 }
 
