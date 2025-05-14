@@ -2,44 +2,46 @@
 body {
     margin: 0;
     padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
 }
 
 /* Escudo y fondo */
 .escudo {
-  display: flex;
-  margin-bottom: 15px;
-  justify-content: center;
-  position: relative;
-  z-index: 2;
-  padding-top: 15px;
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    padding-top: 15px;
 }
+
 .escudo img:not(.fondo) {
-     width: 200px;
-  height: 250px;
-  object-fit: contain;
-  padding-top: 0;
-  z-index: 2;
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
+    padding-top: 0;
+    z-index: 2;
 }
+
 .escudo .fondo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 110%;
-  object-fit: cover;
-  opacity: 0.7;
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    opacity: 0.7;
+    z-index: 1;
 }
 
 /* Header */
 .encabezado {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 5%;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 5%;
+    position: relative;
 }
 
 .nav_bar ul {
@@ -92,14 +94,15 @@ body {
     margin-bottom: 50px;
     padding: 30px;
     border-radius: 30px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
     background: #fff;
     transition: box-shadow 0.3s, background 0.3s, transform 0.2s;
 }
+
 .noticia:hover {
     background: rgb(252, 230, 106, 0.15);
     transform: scale(1.02);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .noticia h3 {
@@ -160,13 +163,13 @@ body {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .evento:hover {
     transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
 }
 
 .evento img {
@@ -223,6 +226,7 @@ body {
     color: #333;
     font-weight: 500;
 }
+
 .linea-tiempo img {
     width: 100%;
     height: 200px;
@@ -283,6 +287,7 @@ footer {
     color: #222;
     text-align: center;
 }
+
 .equipo-profesional p {
     font-size: 1rem;
     padding: 0;
@@ -300,13 +305,14 @@ footer {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s, background 0.3s;
     list-style: none;
     text-align: center;
     padding: 20px 0;
     margin: 0;
 }
+
 .plantilla ul:hover {
     background: rgb(252, 230, 106, 0.15);
     transform: scale(1.03);
@@ -318,7 +324,7 @@ footer {
     object-fit: cover;
     border-radius: 20px;
     margin-bottom: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 /* Estadio */
@@ -326,32 +332,38 @@ footer {
     padding: 30px 5%;
     background: linear-gradient(to right, #ffffff, rgb(248, 221, 70));
 }
+
 .bastion_güecha h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #333;
 }
+
 .estadio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
+
 .estadio .terreno {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s;
 }
+
 .estadio .terreno:hover {
     transform: translateY(-5px) scale(1.03);
 }
+
 .estadio .terreno img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
+
 .estadio p {
     padding: 20px;
     font-size: 1.1rem;
@@ -368,6 +380,7 @@ footer {
     color: #333;
     text-align: center;
 }
+
 .copas ul {
     display: flex;
     justify-content: center;
@@ -376,9 +389,11 @@ footer {
     gap: 40px;
     flex-wrap: wrap;
 }
+
 .copas p {
     text-align: center;
 }
+
 .copas li {
     background: #f0f0f0;
     padding: 15px 20px;
@@ -386,10 +401,12 @@ footer {
     font-size: 1.2rem;
     transition: background 0.3s, transform 0.2s;
 }
+
 .copas li:hover {
     background: rgb(248, 221, 70);
     transform: scale(1.05);
 }
+
 .copas img {
     width: 100%;
     height: 200px;
@@ -401,12 +418,15 @@ footer {
     .noticia {
         grid-template-columns: 1fr;
     }
+
     .lista-eventos {
         grid-template-columns: 1fr;
     }
+
     .linea-tiempo ul {
         gap: 20px;
     }
+
     .copas ul {
         gap: 20px;
     }
@@ -417,20 +437,34 @@ footer {
         width: 120px;
         height: 150px;
     }
+
     .escudo .fondo {
         height: 120px;
     }
-    .noticias, .eventos, .historia, .equipo-profesional, .bastion_güecha, .palmares {
+
+    .noticias,
+    .eventos,
+    .historia,
+    .equipo-profesional,
+    .bastion_güecha,
+    .palmares {
         padding: 15px 2%;
     }
-    .noticias h2, .eventos h2, .historia h2, .equipo-profesional h2, .palmares h2 {
+
+    .noticias h2,
+    .eventos h2,
+    .historia h2,
+    .equipo-profesional h2,
+    .palmares h2 {
         font-size: 1.5rem;
     }
+
     .nav_bar ul {
         flex-direction: column;
         gap: 10px;
         margin: 10px 0 0 0;
     }
+
     .plantilla img {
         width: 80px;
         height: 100px;

@@ -143,7 +143,7 @@ body {
 
         &:hover {
             transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
         }
 
         h3 {
@@ -211,6 +211,7 @@ body {
         h2 {
             font-size: 2rem;
         }
+
         .tier {
             padding: 1.2rem 0.5rem;
         }
@@ -364,9 +365,11 @@ body {
         width: 120px;
         height: 150px;
     }
+
     .escudo .fondo {
         height: 120px;
     }
+
     .nav_bar ul {
         flex-direction: column;
         gap: 10px;
