@@ -410,8 +410,6 @@ img {
     }
   }
 
-
-
   .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.5rem 0;
@@ -511,5 +509,19 @@ img {
     }
     .Ingreso_socios .login-form {
         padding: 1rem 0.5rem;
+    }
+}
+@media(max-width: 600px) {
+    .escudo img:not(.fondo) {
+        width: 120px;
+        height: 150px;
+    }
+    .escudo .fondo {
+        height: 120px;
+    }
+    .nav_bar ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0 0 0;
     }
 }

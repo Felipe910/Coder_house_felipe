@@ -51,17 +51,6 @@ body {
   margin: 30px 0;
   gap: 20px;
 }
-@media (max-width: 768px) {
-  .nav_bar ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    display: none;
-  }
-  .nav_bar ul.active {
-    display: flex;
-  }
-}
 .nav_bar a {
   color: black;
   text-decoration: none;
@@ -77,42 +66,6 @@ body {
   color: #000;
   transform: scale(1.07);
   outline: none;
-}
-@media (max-width: 768px) {
-  .nav_bar a {
-    font-size: 1rem;
-  }
-}
-
-.menu-toggle {
-  display: none;
-  cursor: pointer;
-  padding: 1rem;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1001;
-}
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-}
-.menu-toggle .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 5px 0;
-  transition: 0.3s ease;
-}
-.menu-toggle.active .bar:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-.menu-toggle.active .bar:nth-child(2) {
-  opacity: 0;
-}
-.menu-toggle.active .bar:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .tier_Suscripcion {
@@ -345,22 +298,18 @@ body {
   font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
-  .escudo img {
+@media (max-width: 600px) {
+  .escudo img:not(.fondo) {
     width: 120px;
     height: 150px;
   }
   .escudo .fondo {
     height: 120px;
   }
-  .tier_Suscripcion {
-    padding: 1rem 0.5rem;
-  }
-  .guechas_tv video {
-    height: 180px;
-  }
-  .Ingreso_socios .login-form {
-    padding: 1rem 0.5rem;
+  .nav_bar ul {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0 0 0;
   }
 }
 

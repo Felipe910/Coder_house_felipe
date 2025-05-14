@@ -425,5 +425,19 @@ img {
     padding: 1rem 0.5rem;
   }
 }
+@media (max-width: 600px) {
+  .escudo img:not(.fondo) {
+    width: 120px;
+    height: 150px;
+  }
+  .escudo .fondo {
+    height: 120px;
+  }
+  .nav_bar ul {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0 0 0;
+  }
+}
 
 /*# sourceMappingURL=tienda.css.map */

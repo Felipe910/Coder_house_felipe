@@ -291,8 +291,9 @@ footer {
 
 .plantilla {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
+    align-items: center;
 }
 
 .plantilla ul {
@@ -312,8 +313,8 @@ footer {
 }
 
 .plantilla img {
-    width: 120px;
-    height: 160px;
+    width: 150px;
+    height: 260px;
     object-fit: cover;
     border-radius: 20px;
     margin-bottom: 10px;
