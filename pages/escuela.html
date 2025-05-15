@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,61 +11,67 @@
     <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
 </head>
 
-<header>
-    <div class="escudo">
-        <img class="imagen_escudo" src="../assets/Guechas/Home/guechas_1.png" alt="Escudo" width="200px" height="250px">
-        <img class="fondo" src="../assets/Guechas/Home/hinchas.png" alt="">
-    </div>
-</header>
-
-<!--escuela-->
-
 <body>
-    <section class="encabezado">
-        <nav class="nav_bar">
-            <ul>
-                <li><a href="../index.html" target="">Home</a></li>
-                <li><a href="../pages/equipo_profesional.html" target="">Equipo Profesional</a></li>
-                <li><a href="../pages/socios.html" target="">Socios</a></li>
-                <li><a href="../pages/tienda.html" target="">Tienda</a></li>
+    <header>
+        <div class="escudo">
+            <img class="imagen_escudo" src="../assets/Guechas/Home/guechas_1.png" alt="Escudo Güechas F.C." width="200" height="250">
+            <img class="fondo" src="../assets/Guechas/Home/hinchas.png" alt="Hinchas Güechas F.C.">
+        </div>
+        <div class="encabezado">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="menu-hamburguesa" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="nav_bar">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/equipo_profesional.html">Equipo Profesional</a></li>
+                    <li><a href="../pages/socios.html">Socios</a></li>
+                    <li><a href="../pages/tienda.html">Tienda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-            </ul>
-        </nav>
-    </section>
     <main>
-
-        <Section class="escuela">
+        <section class="escuela">
             <h2>Escuela</h2>
             <article class="eventos_escuela">
                 <ul>
-                    <li><img src="../assets/Guechas/Escuela/inferiores.png" alt="equipo infantil">
-                        <p></p>
+                    <li>
+                        <img src="../assets/Guechas/Escuela/inferiores.png" alt="Equipo infantil">
                     </li>
-                    <li><img src="../assets/Guechas/Escuela/escuela_2.png" alt=""></li>
-                    <li><img src="../assets/Guechas/Escuela/escuela_3.png" alt=""></li>
-                    <li><img src="../assets/Guechas/Escuela/escuela_4.png" alt=""></li>
+                    <li>
+                        <img src="../assets/Guechas/Escuela/escuela_2.png" alt="Entrenamiento escuela 2">
+                    </li>
+                    <li>
+                        <img src="../assets/Guechas/Escuela/escuela_3.png" alt="Entrenamiento escuela 3">
+                    </li>
+                    <li>
+                        <img src="../assets/Guechas/Escuela/escuela_4.png" alt="Entrenamiento escuela 4">
+                    </li>
                 </ul>
             </article>
-        </Section>
-
-        <!--Misión-->
+        </section>
 
         <section class="mision">
             <h2>Misión</h2>
-            <p>La misión de la Escuela de Menores de Güechas FC es proporcionar una educación deportiva de alta calidad,
+            <p>
+                La misión de la Escuela de Menores de Güechas FC es proporcionar una educación deportiva de alta calidad,
                 basada en principios de excelencia y desarrollo personal. Nos comprometemos a ofrecer un entorno seguro
-                y estimulante donde los jóvenes puedan crecer y aprender, tanto en el campo de juego como fuera de él. A
-                través de programas de entrenamiento innovadores y personalizados, buscamos potenciar las habilidades
+                y estimulante donde los jóvenes puedan crecer y aprender, tanto en el campo de juego como fuera de él.
+                A través de programas de entrenamiento innovadores y personalizados, buscamos potenciar las habilidades
                 individuales y colectivas de nuestros estudiantes, fomentando su amor por el fútbol y su desarrollo
-                integral como personas
+                integral como personas.
             </p>
         </section>
 
-        <!--Visión-->
-
         <section class="vision">
             <h2>Visión</h2>
-            <p>La Escuela de Menores de Güechas FC aspira a ser un referente en la formación integral de jóvenes
+            <p>
+                La Escuela de Menores de Güechas FC aspira a ser un referente en la formación integral de jóvenes
                 futbolistas, promoviendo valores como el respeto, la disciplina, el trabajo en equipo y la pasión por el
                 deporte. Nuestra visión es desarrollar talentos que no solo destaquen en el ámbito deportivo, sino que
                 también sean ciudadanos ejemplares, comprometidos con su comunidad y capaces de enfrentar los desafíos
@@ -73,33 +79,35 @@
             </p>
         </section>
 
-        <!--Inscripciones-->
-
         <section class="inscripciones">
             <h2>Inscripciones</h2>
-            <ul>
-                <li>
-                    <label for="Nombres">Nombre</label>
-                    <input type="text">
-                </li>
-                <li>
-                    <label for="apellidos">Apellidos</label>
-                    <input type="text">
-                </li>
-                <li>
-                    <label for="Correo">Correo</label>
-                    <input type="email">
-                </li>
-                <li>
-                    <label for="Telefono">Telefono</label>
-                    <input type="number">
-                </li>
-                <li>
-                    <label for="Comentarios">Comentarios</label>
-                    <input type="text">
-                </li>
-                <button type="button">Enviar</button>
-            </ul>
+            <form>
+                <ul>
+                    <li>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </li>
+                    <li>
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" required>
+                    </li>
+                    <li>
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </li>
+                    <li>
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </li>
+                    <li>
+                        <label for="comentarios">Comentarios</label>
+                        <input type="text" id="comentarios" name="comentarios">
+                    </li>
+                    <li>
+                        <button type="submit">Enviar</button>
+                    </li>
+                </ul>
+            </form>
         </section>
     </main>
 
@@ -111,8 +119,5 @@
         </ul>
         <p class="copyright">&copy; 2023 Güechas F.C. Todos los derechos reservados.</p>
     </footer>
-
-
 </body>
-
 </html>

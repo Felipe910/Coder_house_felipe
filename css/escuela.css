@@ -13,6 +13,7 @@ body {
   margin-bottom: 15px;
   min-height: 250px;
 }
+
 .escudo img {
   width: 200px;
   height: 250px;
@@ -20,6 +21,7 @@ body {
   z-index: 2;
   position: relative;
 }
+
 .escudo .fondo {
   position: absolute;
   top: 0;
@@ -42,6 +44,7 @@ body {
 .nav_bar {
   z-index: 2;
 }
+
 .nav_bar ul {
   display: flex;
   list-style: none;
@@ -49,6 +52,7 @@ body {
   margin: 30px 0;
   gap: 20px;
 }
+
 .nav_bar a {
   color: black;
   text-decoration: none;
@@ -59,7 +63,9 @@ body {
   transition: background 0.3s, color 0.3s, transform 0.2s;
   text-shadow: 0 1px 2px #fff;
 }
-.nav_bar a:hover, .nav_bar a:focus {
+
+.nav_bar a:hover,
+.nav_bar a:focus {
   background: rgb(252, 230, 106);
   color: #000;
   transform: scale(1.07);
@@ -81,6 +87,7 @@ body {
   gap: 30px;
   flex-wrap: wrap;
 }
+
 .eventos_escuela li {
   background: #f0f0f0;
   padding: 15px 20px;
@@ -89,10 +96,12 @@ body {
   transition: background 0.3s, transform 0.2s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .eventos_escuela li:hover {
   background: rgb(252, 230, 106);
   transform: scale(1.05);
 }
+
 .eventos_escuela img {
   width: 100%;
   height: 180px;
@@ -102,17 +111,22 @@ body {
   margin: 0 auto 10px auto;
 }
 
-.mision, .vision {
+.mision,
+.vision {
   padding: 30px 5%;
   background: linear-gradient(to right, #ffffff, rgb(252, 230, 106));
 }
-.mision h2, .vision h2 {
+
+.mision h2,
+.vision h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 25px;
   color: #000;
 }
-.mision p, .vision p {
+
+.mision p,
+.vision p {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #444;
@@ -124,27 +138,33 @@ body {
 .inscripciones {
   padding: 30px 5%;
 }
+
 .inscripciones h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 25px;
   color: #000;
 }
+
 .inscripciones ul {
   list-style: none;
   padding: 0;
   margin: 0 0 20px 0;
 }
+
 .inscripciones li {
   margin-bottom: 18px;
 }
+
 .inscripciones label {
   display: block;
   margin-bottom: 6px;
   font-weight: bold;
   color: #222;
 }
-.inscripciones input, .inscripciones textarea {
+
+.inscripciones input,
+.inscripciones textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
@@ -153,10 +173,13 @@ body {
   resize: vertical;
   transition: border 0.2s;
 }
-.inscripciones input:focus, .inscripciones textarea:focus {
+
+.inscripciones input:focus,
+.inscripciones textarea:focus {
   border: 1.5px solid rgb(252, 230, 106);
   outline: none;
 }
+
 .inscripciones button {
   background-color: white;
   color: black;
@@ -170,6 +193,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   transition: background 0.3s, color 0.3s;
 }
+
 .inscripciones button:hover {
   background-color: rgb(252, 230, 106);
   color: #000;
@@ -181,6 +205,7 @@ body {
   padding: 40px 5%;
   text-align: center;
 }
+
 .footer ul {
   display: flex;
   justify-content: center;
@@ -189,12 +214,14 @@ body {
   gap: 30px;
   margin-bottom: 20px;
 }
+
 .footer a {
   color: white;
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s;
 }
+
 .footer a:hover {
   color: rgb(252, 230, 106);
 }
@@ -209,31 +236,112 @@ body {
   .eventos_escuela ul {
     gap: 15px;
   }
+
   .escudo img {
     width: 120px;
     height: 150px;
   }
+
   .escudo .fondo {
     height: 120px;
   }
 }
+
 @media (max-width: 600px) {
   .encabezado {
     padding: 15px 2%;
   }
+
   .nav_bar ul {
     flex-direction: column;
     gap: 10px;
     margin: 10px 0 0 0;
   }
+
   .eventos_escuela img {
     height: 100px;
   }
-  .mision, .vision, .inscripciones {
+
+  .mision,
+  .vision,
+  .inscripciones {
     padding: 15px 2%;
   }
+
   .footer {
     padding: 20px 2%;
+  }
+}
+
+/* Oculta el checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Botón hamburguesa */
+.menu-hamburguesa {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-hamburguesa span {
+  height: 4px;
+  width: 100%;
+  background: #222;
+  margin: 5px 0;
+  border-radius: 2px;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-hamburguesa {
+    display: flex;
+  }
+
+  .nav_bar {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    width: 220px;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .menu-toggle:checked~.menu-hamburguesa+.nav_bar {
+    transform: translateX(0);
+  }
+
+  .nav_bar ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    align-items: center
+  }
+
+  .nav_bar li {
+    margin: 20px 0;
+    text-align: right;
+    list-style: none;
+  }
+
+  .nav_bar a {
+    padding: 10px 20px;
+    display: block;
+    color: #222;
+    text-decoration: none;
   }
 }
 

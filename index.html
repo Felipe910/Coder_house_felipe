@@ -20,7 +20,13 @@
 
     <!-- Encabezado y navegación -->
     <header class="encabezado">
-        <nav class="nav_bar">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-hamburguesa" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="nav_bar" id="nav-bar">
             <ul>
                 <li><a href="./pages/equipo_profesional.html">Equipo Profesional</a></li>
                 <li><a href="./pages/escuela.html">Escuela</a></li>
@@ -60,7 +66,8 @@
                         posición de "Güechas F.C." en la liga, sino que también fortalece el espíritu y la moral del
                         equipo para los próximos desafíos.
                     </p>
-                    <img src="./assets/Guechas/Home/victoria_jugadores.png" alt="Jugadores de Güechas F.C. celebrando la victoria">
+                    <img src="./assets/Guechas/Home/victoria_jugadores.png"
+                        alt="Jugadores de Güechas F.C. celebrando la victoria">
                 </div>
             </article>
 
@@ -75,7 +82,8 @@
                     </p>
                     <p>
                         Juan Pérez, conocido por su velocidad y precisión en el campo, ha demostrado ser un jugador
-                        clave en sus anteriores equipos. Su capacidad para leer el juego y su instinto goleador lo convierten
+                        clave en sus anteriores equipos. Su capacidad para leer el juego y su instinto goleador lo
+                        convierten
                         en una amenaza constante para las defensas rivales.
                     </p>
                     <video src="" controls>
@@ -139,19 +147,23 @@
             <div class="linea-tiempo">
                 <ul>
                     <li>
-                        <a href="#"><img src="./assets/Guechas/equipo_profesional/80s.png" alt="Equipo en los años 80"></a>
+                        <a href="#"><img src="./assets/Guechas/equipo_profesional/80s.png"
+                                alt="Equipo en los años 80"></a>
                         <p>80's</p>
                     </li>
                     <li>
-                        <a href="#"><img src="./assets/Guechas/equipo_profesional/90s.png" alt="Equipo en los años 90"></a>
+                        <a href="#"><img src="./assets/Guechas/equipo_profesional/90s.png"
+                                alt="Equipo en los años 90"></a>
                         <p>90's</p>
                     </li>
                     <li>
-                        <a href="#"><img src="./assets/Guechas/equipo_profesional/2000s.png" alt="Equipo en los años 2000"></a>
+                        <a href="#"><img src="./assets/Guechas/equipo_profesional/2000s.png"
+                                alt="Equipo en los años 2000"></a>
                         <p>00's</p>
                     </li>
                     <li>
-                        <a href="#"><img src="./assets/Guechas/equipo_profesional/jugadores.png" alt="Equipo en la actualidad"></a>
+                        <a href="#"><img src="./assets/Guechas/equipo_profesional/jugadores.png"
+                                alt="Equipo en la actualidad"></a>
                         <p>Actualidad</p>
                     </li>
                 </ul>
@@ -168,6 +180,13 @@
         </ul>
         <p class="copyright">&copy; 2023 Güechas F.C. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navBar = document.getElementById('nav-bar');
+        menuBtn.addEventListener('click', () => {
+            navBar.classList.toggle('abierto');
+        });
+    </script>
 </body>
 
 </html>
