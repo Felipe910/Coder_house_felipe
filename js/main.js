@@ -1,10 +1,13 @@
-// Variables y arrays
-const PRODUCTOS = ["Camisa", "Pantalón", "Zapatos"];
+const PRODUCTOS = ["Equipación Local", "Equipación Visitante", "Tercera Equipación"];
+const PRECIOS = [79.99, 79.99, 89.99];
+let saldo = 0;
+
 // Validar usuario
 function saludarUsuario() {
     let nombre = prompt("Ingresa tu nombre:");
-    let saldo= prompt("Ingresa tu saldo inicial:");
-    alert(`Hola ${nombre}, tienes $${saldo} para gastar.`);
+    let saldoUsuario = parseFloat(prompt("Ingresa tu saldo inicial:"));
+    alert(`Hola ${nombre}, tienes $${saldoUsuario} para gastar.`);
+    return saldoUsuario;
 }
 
 // Función 2: Mostrar productos
@@ -19,7 +22,7 @@ function mostrarProductos() {
 function comprar() {
     let opcion = parseInt(prompt("Elige un producto (1 al 3):")) - 1;
     if (opcion >= 0 && opcion < PRODUCTOS.length) {
-        let precio = 300;
+        let precio = (PRECIOS.length);
         if (saldo >= precio) {
             saldo -= precio;
             alert(`Compra exitosa! Saldo restante: $${saldo}`);
@@ -32,6 +35,6 @@ function comprar() {
 }
 
 // Llamadas a funciones
-saludarUsuario();
+saldo = saludarUsuario();
 mostrarProductos();
 comprar();
