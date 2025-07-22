@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Güechas F.C.- Tienda</title>
+    <title>Güechas F.C. - Tienda</title>
     <link rel="stylesheet" href="../css/tienda.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<!-- Home -->
-
 <body>
-<script src="../js/main.js"></script>
     <header>
         <div class="escudo">
             <img src="../assets/Guechas/Home/guechas_1.png" alt="Escudo" width="200px" height="250px">
             <img class="fondo" src="../assets/Guechas/Home/hinchas.png" alt="">
         </div>
     </header>
+    
     <section class="encabezado">
         <nav class="nav_bar">
             <ul>
@@ -28,15 +28,31 @@
                 <li><a href="../pages/equipo_profesional.html" target="">Equipo Profesional</a></li>
                 <li><a href="../pages/escuela.html" target="">Escuela</a></li>
                 <li><a href="../pages/socios.html" target="">Socios</a></li>
+                <li class="carrito-icono">
+                    <a href="#carrito-container">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="carrito-contador">0</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </section>
 
+    <!-- Carrito de compras (modal) -->
+    <div id="carrito-container" class="carrito-container">
+        <div class="carrito-contenido">
+            <h2>Tu Carrito <i class="fas fa-shopping-cart"></i></h2>
+            <div id="carrito"></div>
+            <div id="carrito-total"></div>
+            <div class="carrito-acciones">
+                <button id="limpiar-carrito" class="btn btn-vaciar">Vaciar carrito</button>
+                <button id="btn-checkout" class="btn btn-pagar">Proceder al pago</button>
+            </div>
+        </div>
+    </div>
 
-<div id="productos"></div>
-<h2>Carrito</h2>
-<div id="carrito"></div>
-<button id="limpiar-carrito">Vaciar carrito</button>
+    <!-- Sección de resumen de compra -->
+    <div id="checkout-resumen" class="checkout-resumen"></div>
 
     <!-- Categorías de productos -->
     <section class="categorias">
@@ -62,87 +78,38 @@
         </div>
     </section>
 
-    <!-- Temporada actual -->
+    <!-- Productos-->
+    <section id="productos-container" class="productos-container">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <div id="productos" class="productos-grid"></div>
+        </div>
+    </section>
+
+    <!-- Temporada actual (sección alternativa) -->
     <section id="temporada-actual" class="temporada-actual">
         <div class="container">
             <h2 class="section-title">Temporada 2024/25</h2>
-            <div class="productos-grid">
-                <div class="producto-card">
-                    <img src="../assets/Guechas/Tienda/local.png" alt="Equipación Local Temporada 24/25">
-                    <h3>Equipación Local</h3>
-                    <p class="precio">€79.99</p>
-                    <button class="btn agregar-carrito" data-producto="Equipación Local 24/25">Añadir al
-                        carrito</button>
-                </div>
-                <div class="producto-card">
-                    <img src="../assets/Guechas/Tienda/visitante.png" alt="Equipación Visitante Temporada 24/25">
-                    <h3>Equipación Visitante</h3>
-                    <p class="precio">€79.99</p>
-                    <button class="btn agregar-carrito" data-producto="Equipación Visitante 24/25">Añadir al
-                        carrito</button>
-                </div>
-                <div class="producto-card">
-                    <img src="../assets/Guechas/Tienda/tercera.png" alt="Tercera Equipación Temporada 24/25">
-                    <h3>Tercera Equipación</h3>
-                    <p class="precio">€89.99</p>
-                    <button class="btn agregar-carrito" data-producto="Tercera Equipación 24/25">Añadir al
-                        carrito</button>
-                </div>
-            </div>
+            <!-- Los productos se cargarán dinámicamente desde JS -->
+            <div id="temporada-actual-productos" class="productos-grid"></div>
         </div>
     </section>
 
-    <!-- Temporadas anteriores -->
+    <!-- Temporadas anteriores (sección alternativa) -->
     <section class="temporadas-anteriores">
         <div class="container">
             <h2 class="section-title">Temporadas anteriores</h2>
-            <div class="productos-grid">
-                <div class="producto-card">
-                    <img src="../assets/Guechas/Tienda/equipacion_90s.png" alt="Equipación años 90">
-                    <h3>Edición 90's</h3>
-                    <p class="precio">€69.99</p>
-                    <button class="btn agregar-carrito" data-producto="Equipación 90's">Añadir al carrito</button>
-                </div>
-                <div class="producto-card">
-                    <img src="../assets/Guechas/Tienda/equipacion_00s.png" alt="Equipación años 2000">
-                    <h3>Edición 2000's</h3>
-                    <p class="precio">€69.99</p>
-                    <button class="btn agregar-carrito" data-producto="Equipación 2000's">Añadir al carrito</button>
-                </div>
-                <div class="producto-card">
-                    <img src="../assets/Guechas/Tienda/equipacion_80s.png" alt="Equipación años 80">
-                    <h3>Edición 80's</h3>
-                    <p class="precio">€69.99</p>
-                    <button class="btn agregar-carrito" data-producto="Equipación 80's">Añadir al carrito</button>
-                </div>
-            </div>
+            <!-- Los productos se cargarán dinámicamente desde JS -->
+            <div id="temporadas-anteriores-productos" class="productos-grid"></div>
         </div>
     </section>
 
-    <!-- Más vendidos -->
+    <!-- Más vendidos (sección alternativa) -->
     <section class="mas-vendidos">
         <div class="container">
             <h2 class="section-title">Lo más vendido</h2>
-            <div class="productos-grid">
-                <div class="producto-card destacado">
-                    <img src="../assets/Guechas/Tienda/bufanda.png" alt="Bufanda oficial">
-                    <h3>Bufanda Oficial</h3>
-                    <p class="precio">€24.99</p>
-                    <button class="btn agregar-carrito" data-producto="Bufanda Oficial">Añadir al carrito</button>
-                </div>
-                <div class="producto-card">
-                    <img src="../assets/Guechas/Tienda/gorra.png" alt="Gorra oficial">
-                    <h3>Gorra Oficial</h3>
-                    <p class="precio">€29.99</p>
-                    <button class="btn agregar-carrito" data-producto="Gorra Oficial">Añadir al carrito</button>
-                </div>
-                <div class="producto-card">
-                    <img src="../assets/Guechas/Tienda/mochila.png" alt="Mochila oficial">
-                    <h3>Mochila Oficial</h3>
-                    <p class="precio">€49.99</p>
-                    <button class="btn agregar-carrito" data-producto="Mochila Oficial">Añadir al carrito</button>
-                </div>
-            </div>
+            <!-- Los productos se cargarán dinámicamente desde JS -->
+            <div id="mas-vendidos-productos" class="productos-grid"></div>
         </div>
     </section>
 
@@ -157,6 +124,7 @@
             </form>
         </div>
     </section>
+    
     <footer class="footer">
         <ul class="footer-links">
             <li><a href="#">Contáctanos</a></li>
@@ -165,4 +133,8 @@
         </ul>
         <p class="copyright">&copy; 2023 Güechas F.C. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- JavaScript al final del body -->
+    <script src="../js/main.js"></script>
 </body>
+</html>
