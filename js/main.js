@@ -9,9 +9,9 @@ class Producto {
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
-        this.imagen = imagen || `producto_${id}.jpg`;
+        this.imagen = imagen || `producto_${id}.png`;
     }
-}
+}const contenedor = document.getElementById('productos');
 
 class Carrito {
     constructor() {
@@ -86,15 +86,15 @@ async function cargarProductos() {
         console.error('Error:', error);
         // Datos de respaldo si falla la API
         return [
-            new Producto(1, "Equipación Local 24/25", 79.99, 10, "producto_1.png"),
-            new Producto(2, "Equipación Visitante 24/25", 79.99, 8, "visitante.png"),
-            new Producto(3, "Tercera Equipación 24/25", 89.99, 5, "tercera_equipacion.jpg"),
-            new Producto(4, "Equipación 90's", 69.99, 3, "equipacion_90s.jpg"),
-            new Producto(5, "Equipación 2000's", 69.99, 7, "equipacion_2000s.jpg"),
-            new Producto(6, "Equipación 80's", 69.99, 2, "equipacion_80s.jpg"),
-            new Producto(7, "Bufanda Oficial", 24.99, 15, "bufanda.jpg"),
-            new Producto(8, "Gorra Oficial", 29.99, 12, "gorra.jpg"),
-            new Producto(9, "Mochila Oficial", 49.99, 6, "mochila.jpg")
+ new Producto(1, "Equipación Local 24/25", 79.99, 10, "local.png", "temporada-actual"),
+                    new Producto(2, "Equipación Visitante 24/25", 79.99, 8, "visitante.png", "temporada-actual"),
+                    new Producto(3, "Tercera Equipación 24/25", 89.99, 5, "tercera.png", "temporada-actual"),
+                    new Producto(4, "Equipación 90's", 69.99, 3, "equipacion_90s.png", "temporadas-anteriores"),
+                    new Producto(5, "Equipación 2000's", 69.99, 7, "equipacion_00s.png", "temporadas-anteriores"),
+                    new Producto(6, "Equipación 80's", 69.99, 2, "equipacion_80s.png", "temporadas-anteriores"),
+                    new Producto(7, "Bufanda Oficial", 24.99, 15, "bufanda.png", "mas-vendidos"),
+                    new Producto(8, "Gorra Oficial", 29.99, 12, "gorra.png", "mas-vendidos"),
+                    new Producto(9, "Mochila Oficial", 49.99, 6, "mochila.png", "mas-vendidos")
         ];
     }
 }
@@ -107,14 +107,14 @@ function renderizarProductos(productos) {
         const card = document.createElement('div');
         card.className = 'producto-card';
         card.innerHTML = `
-            <img src="../assets/Guechas/Tienda/local.png ${producto.imagen}" alt="${producto.nombre}">
-            <h3>${producto.nombre}</h3>
-            <p>€${producto.precio.toFixed(2)}</p>
-            <p class="stock">Stock: ${producto.stock}</p>
-            <button class="btn agregar-carrito" data-id="${producto.id}">
-                Añadir al carrito
-            </button>
-        `;
+    <img src="../assets/Guechas/Tienda/${producto.imagen}" alt="${producto.nombre}">
+    <h3>${producto.nombre}</h3>
+    <p>€${producto.precio.toFixed(2)}</p>
+    <p class="stock">Stock: ${producto.stock}</p>
+    <button class="btn agregar-carrito" data-id="${producto.id}">
+        Añadir al carrito
+    </button>
+`;
         contenedor.appendChild(card);
     });
 }
